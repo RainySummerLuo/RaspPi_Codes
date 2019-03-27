@@ -47,12 +47,12 @@ Using [WiringPi](http://wiringpi.com/) for GPIO access. <br/>
    ```
  - Common shell command: 
    - mode <pin> <mode>
-     Set a pin into input, output or pwm mode. Can also use the literals up, down or tri to set the internal pull-up, pull-down  or  tristate (off) controls.
-     ```gpio mode 7 out```
+     Set a pin into input, output or pwm mode. Can also use the literals up, down or tri to set the internal pull-up, pull-down  or  tristate (off) controls. <br/>
+     ```gpio mode 7 out``` <br/>
      ```gpio mode 7 in```
    - write <pin> <value>
-     Write the given value (0 or 1) to the pin. You need to set the pin to output mode first.
-     ```gpio write 7 1```
-     ```gpio write 7 0```
-     Writes the value HIGH or LOW (1 or 0) to the given pin which must have been previously set as an output.
+     Write the given value (0 or 1) to the pin. You need to set the pin to output mode first. <br/>
+     ```gpio write 7 1``` <br/>
+     ```gpio write 7 0``` <br/>
+     Writes the value HIGH or LOW (1 or 0) to the given pin which must have been previously set as an output. <br/>
      WiringPi treats any non-zero number as HIGH, however 0 is the only representation of LOW.
