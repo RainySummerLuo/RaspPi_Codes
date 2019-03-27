@@ -2,7 +2,7 @@
 Basing on codes in repo https://github.com/kuretru/Script-Collection. <br/>
 Using [Server酱](http://sc.ftqq.com/3.version) to send msg to wechat when there's a shell login. 
 ## Usage:
- - for non-```root`` user:
+ - for non-```root``` user:
    ```bash
    mkdir ~/shell
    cd ~/shell
@@ -11,7 +11,7 @@ Using [Server酱](http://sc.ftqq.com/3.version) to send msg to wechat when there
    chmod u+x login_notice.sh
    echo ". ~/shell/login_notice.sh" >> ~/.bash_profile
    ```
- - for ```root``` user:
+ - for ```root``` user: <br/>
    Same steps as non-```root``` user does, and <br/>
    Write in ```~/.bashrc``` file the following
    ```bash
