@@ -46,11 +46,11 @@ Using [WiringPi](http://wiringpi.com/) for GPIO access. <br/>
 
    ```
  - Common shell command: 
-   - mode <pin> <mode>
+   - mode <pin> <mode> <br/>
      Set a pin into input, output or pwm mode. Can also use the literals up, down or tri to set the internal pull-up, pull-down  or  tristate (off) controls. <br/>
      ```gpio mode 7 out``` <br/>
      ```gpio mode 7 in```
-   - write <pin> <value>
+   - write <pin> <value> <br/>
      Write the given value (0 or 1) to the pin. You need to set the pin to output mode first. <br/>
      ```gpio write 7 1``` <br/>
      ```gpio write 7 0``` <br/>
