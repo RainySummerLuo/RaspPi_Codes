@@ -2,14 +2,23 @@
 Basing on codes in repo https://github.com/kuretru/Script-Collection. <br/>
 Using [Server酱](http://sc.ftqq.com/3.version) to send msg to wechat when there's a shell login. 
 ## Usage:
-```bash
-mkdir ~/shell
-cd ~/shell
-wget https://raw.githubusercontent.com/RainySummerLuo/RaspPi_Codes/master/login_notice.sh
-sudo nano login_notice.sh
-chmod u+x login_notice.sh
-echo ". ~/shell/login_notice.sh" >> ~/.bash_profile
-```
+ - for non-```root`` user:
+   ```bash
+   mkdir ~/shell
+   cd ~/shell
+   wget https://raw.githubusercontent.com/RainySummerLuo/RaspPi_Codes/master/login_notice.sh
+   sudo nano login_notice.sh
+   chmod u+x login_notice.sh
+   echo ". ~/shell/login_notice.sh" >> ~/.bash_profile
+   ```
+ - for ```root``` user:
+   Same steps as non-```root``` user does, and <br/>
+   Write in ```~/.bashrc``` file the following
+   ```bash
+   if test -f .bash_profile; then
+   . ~/.bash_profile
+   fi
+   ```
 
 # GPIO
 Using [WiringPi](http://wiringpi.com/) for GPIO access. <br/>
