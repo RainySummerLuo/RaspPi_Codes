@@ -1,6 +1,6 @@
 # LoginNotice
 Basing on codes in repo https://github.com/kuretru/Script-Collection. <br/>
-Using [Server酱](http://sc.ftqq.com/3.version) to send msg to wechat when there's a bash login. 
+Using [Server酱](http://sc.ftqq.com/3.version) to send msg to wechat when there's a shell login. 
 ## Usage:
 ```bash
 mkdir ~/shell
