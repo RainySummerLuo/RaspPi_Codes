@@ -8,7 +8,7 @@
 #===========================================================
 
 #Server酱调用密钥
-key='******************************************************'
+key='------------------------------------------------------'
 
 user=$(whoami)
 hostname=$(hostname | sed 's/\./_/g')
@@ -16,12 +16,12 @@ ip=$(strings /var/log/lastlog | grep -o -P "(\d+\.)(\d+\.)(\d+\.)\d+")
 domain=$(strings /var/log/lastlog | grep -o -P "(\d+\.)(\d+\.)(\d+\.)")
 now=$(date "+%Y.%m.%d_%H%M%S")
 
-if ip=="192.168.123.127"
+if ["$ip"="192.168.123.127"]
 then
-	wget -q --spider https://sc.ftqq.com/${key}.send?text="RemoteLogin@RaspPi"\&desp="%0a%0a Via: Oray  %0a%0a UserName: ${user} %0a%0a Time: ${now}"
-elif ip=="192.168.123.160"
+	wget -q --spider https://sc.ftqq.com/${key}.send?text="OrayLogin@RaspPi"\&desp="%0a%0a Via: Oray  %0a%0a UserName: ${user} %0a%0a Time: ${now}"
+elif ["$ip"="192.168.123.160"]
 then
 	wget -q --spider https://sc.ftqq.com/${key}.send?text="TerminalLogin@RaspPi"\&desp="%0a%0a IPAddr.: ${ip} %0a%0a UserName: ${user} %0a%0a Time: ${now}"
 else
-	wget -q --spider https://sc.ftqq.com/${key}.send?text="!UnauthLogin!@RaspPi"\&desp="%0a%0a Address: ${ip} %0a%0a UserName: ${user} %0a%0a Time: ${now}"
+	wget -q --spider https://sc.ftqq.com/${key}.send?text="RemoteLogin@RaspPi"\&desp="%0a%0a Address: ${ip} %0a%0a UserName: ${user} %0a%0a Time: ${now}"
 fi
